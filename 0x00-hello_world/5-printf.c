@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
- *	* printf text
- *      * Return: Always 0 (Success)
- *      */
-
+ *
+ *  * print_hello - Prints "with proper grammar, but the outcome is a piece of art,"
+ *
+ *   */
 int main(void)
 
 {

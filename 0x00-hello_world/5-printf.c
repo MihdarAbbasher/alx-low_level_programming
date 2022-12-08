@@ -1,4 +1,8 @@
 #include <stdio.h>
+/**
+ *	* printf text
+ *      * Return: Always 0 (Success)
+ *      */
 
 int main(void)
 

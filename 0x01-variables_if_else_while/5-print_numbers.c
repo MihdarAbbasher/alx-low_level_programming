@@ -4,7 +4,7 @@
 
 /* betty style doc for function main goes there */
 /**
-* main - print digits from 0 - 9 
+* main - print digits from 0 - 9
 * Return: 0
 */
 int main(void)

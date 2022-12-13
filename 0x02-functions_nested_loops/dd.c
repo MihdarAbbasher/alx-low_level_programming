@@ -1,23 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
+#include "main.h"
 /* betty style doc for function main goes there */
 /**
-* main - print the alphabet
-* Return: 0
+* print_alphabet - print the alphabet
+* Return: void
 */
-int main(void)
+void print_alphabet(void)
 {
 	int i;
 
 	for (i = 97; i < 123; i++)
 	{
-		if (i != 101 && i != 113)
-		{
-			putchar(i);
-		}
+		_putchar(i);
 	}
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }

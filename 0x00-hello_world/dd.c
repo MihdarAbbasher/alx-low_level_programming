@@ -1,10 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
-int main(void)
-{
+int ol_main (void)
+	{
 	int n;
 
 	srand(time(0));
@@ -22,4 +23,20 @@ int main(void)
 		printf("%d is negative\n", n);
 	}	
 	return (0);
+}
+
+/* n - Entry point
+ *
+ *   *
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *     */
+
+int main(void)
+
+{
+
+	    return (0);
+
 }

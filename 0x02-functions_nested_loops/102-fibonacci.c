@@ -20,6 +20,6 @@ int main(void)
 		printf("%d, ", b);
 	}
 	tmp = a + b;
-	printf("%d", tmp);
+	printf("%d\n", tmp);
 	return (0);
 }

@@ -9,34 +9,33 @@
 
 int getmin2 (int m)
 {
-        int m2;
-
-        if (m < 10)
-        {
-                m2 = 0;
-        }
-        else if (m < 20)
-        {
-                m2 = 1;
-        }
-        else if (m < 30)
-        {
-                m2 = 2;
-        }
-        else if (m < 40)
-        {
-                m2 = 3;
-        }
-        else if (m < 50)
-        {
-                m2 = 4;
-        }
-        else if (m < 60)
-        {
-                m2 = 5;
-        }
-        return (m2);
-
+	int m2;
+        
+	if (m < 10)
+	{
+		m2 = 0;
+	}
+	else if (m < 20)
+	{
+		m2 = 1;
+	}
+	else if (m < 30)
+	{
+		m2 = 2;
+	}
+	else if (m < 40)
+	{
+		m2 = 3;
+	}
+	else if (m < 50)
+	{
+		m2 = 4;
+	}
+	else if (m < 60)
+	{
+		m2 = 5;
+	}
+	return (m2);
 }
 
 /**

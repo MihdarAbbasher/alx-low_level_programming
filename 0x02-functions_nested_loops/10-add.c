@@ -7,7 +7,7 @@
 * @b: int par2
 * Return: int addition result
 */
-void add(int a, int b)
+int add(int a, int b)
 {
 	return (a + b);
 }

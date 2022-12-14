@@ -7,19 +7,18 @@
 */
 int main(void)
 {
-	long a, b, tmp;
+	long a, b, tmp, s;
 
 	a = 1;
 	b = 2;
-	printf("%ld, %ld, ", a, b);
+	s = 3;
 	while (b <= 4000000)
 	{
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		printf("%ld, ", b);
+		s = s + tmp;
 	}
-	tmp = a + b;
-	printf("%ld\n", tmp);
+	printf("%ld\n", s);
 	return (0);
 }

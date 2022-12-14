@@ -11,7 +11,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	printf("%d, %d, ", a, b)
+	printf("%d, %d, ", a, b);
 	for (i = 1; i < 48; i++)
 	{
 		tmp = a + b;

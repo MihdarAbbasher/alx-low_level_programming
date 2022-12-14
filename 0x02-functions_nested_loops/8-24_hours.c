@@ -2,7 +2,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
-* jack_bauer  - print the hours and minutes 
+* jack_bauer  - print the hours and minutes
 * Return: void
 */
 void jack_bauer(void)
@@ -19,7 +19,7 @@ void jack_bauer(void)
 		else
 		{
 			h1 = 1;
-		}	
+		}
 		for (m = 0; m < 60; m++)
 		{
 			m1 = m % 10;
@@ -28,25 +28,25 @@ void jack_bauer(void)
 				m2 = 0;
 			}
 			else if (m < 20)
-                        {
-                                m2 = 1;
-                        }
-                        else if (m < 30)
-                        {
-                                m2 = 2;
-                        }
-                        else if (m < 40)
-                        {
-                                m2 = 3;
-                        }
-                        else if (m < 50)
-                        {
-                                m2 = 4;
-                        }
-                        else if (m < 60)
-                        {
-                                m2 = 5;
-                        }
+			{
+				m2 = 1;
+			}
+			else if (m < 30)
+			{
+				m2 = 2;
+			}
+			else if (m < 40)
+			{
+				m2 = 3;
+			}
+			else if (m < 50)
+			{
+				m2 = 4;
+			}
+			else if (m < 60)
+			{
+				m2 = 5;
+			}
 			_putchar(h1);
 			_putchar(h2);
 			_putchar(':');

@@ -2,7 +2,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
-* times_table - print the time table 
+* times_table - print the time table
 * Return: void
 */
 void times_table(void)
@@ -27,7 +27,7 @@ void times_table(void)
 			_putchar(mod + '0');
 			if (j != 9)
 			{
-				_putchar(',');	
+				_putchar(',');
 				_putchar(' ');
 			}
 		}

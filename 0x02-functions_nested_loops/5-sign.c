@@ -3,7 +3,7 @@
 /* betty style doc for function main goes there */
 /**
 * print_sign - check if alphabet
-* @n: parameter to check
+* @c: parameter to check
 * Return: 0, -1 or 1
 */
 int print_sign(int c)

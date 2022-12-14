@@ -11,7 +11,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	s = 3;
+	s = 2;
 	while (b <= 4000000)
 	{
 		tmp = a + b;

@@ -8,19 +8,19 @@
 int main(void)
 {
 	int i;
-	double a, b, tmp;
+	unsigned long a, b, tmp;
 
 	a = 1;
 	b = 2;
-	printf("%0f, %0f, ", a, b);
+	printf("%lu, %lu, ", a, b);
 	for (i = 1; i < 96; i++)
 	{
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		printf("%0f, ", b);
+		printf("%lu, ", b);
 	}
 	tmp = a + b;
-	printf("%0f\n", tmp);
+	printf("%lu\n", tmp);
 	return (0);
 }

@@ -7,10 +7,10 @@
 * Return: int minutes
 */
 
-int getmin2 (int m)
+int getmin2(int m)
 {
 	int m2;
-        
+
 	if (m < 10)
 	{
 		m2 = 0;

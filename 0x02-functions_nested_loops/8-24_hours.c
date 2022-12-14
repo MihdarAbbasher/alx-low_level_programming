@@ -3,7 +3,7 @@
 /* betty style doc for function main goes there */
 /**
 * getmin2 - get minutes 2
-* @m int min
+* @m: int min
 * Return: int minutes
 */
 

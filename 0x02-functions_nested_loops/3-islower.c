@@ -3,7 +3,7 @@
 /* betty style doc for function main goes there */
 /**
 * _islower - check if alphabet
-* -c: parameter to check
+* @c: parameter to check
 * Return: 0 or 1
 */
 int _islower(int c)

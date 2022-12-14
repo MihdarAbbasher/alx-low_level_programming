@@ -2,7 +2,8 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
-* print_alphabet - check if alphabet
+* _islower - check if alphabet
+* c: parameter to check
 * Return: 0 or 1
 */
 int _islower(int c)
@@ -17,5 +18,5 @@ int _islower(int c)
 	{
 		r = 0;
 	}
-	return r;
+	return (r);
 }

@@ -20,12 +20,15 @@ void times_table(void)
 			{
 				_putchar(div + '0');
 			}
+			else if (j != 0)
+			{
+				_putchar(' ');
+			}
 			_putchar(mod + '0');
-			_putchar(' ');
-			_putchar(' ');
 			if (j != 9)
 			{
-				_putchar(',');
+				_putchar(',');	
+				_putchar(' ');
 			}
 		}
 		_putchar('\n');

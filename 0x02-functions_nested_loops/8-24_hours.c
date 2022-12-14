@@ -22,7 +22,7 @@ void jack_bauer(void)
 		}	
 		for (m = 0; m < 60; m++)
 		{
-			m2 = m % 10;
+			m1 = m % 10;
 			if (m < 10)
 			{
 				m2 = 0;

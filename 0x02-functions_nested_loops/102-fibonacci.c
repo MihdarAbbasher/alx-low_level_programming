@@ -12,15 +12,15 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (i = 1; i < 48; i++)
 	{
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		printf("%d, ", b);
+		printf("%ld, ", b);
 	}
 	tmp = a + b;
-	printf("%d\n", tmp);
+	printf("%ld\n", tmp);
 	return (0);
 }

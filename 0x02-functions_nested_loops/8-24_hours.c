@@ -16,9 +16,13 @@ void jack_bauer(void)
 		{
 			h1 = 0;
 		}
-		else
+		else if (h < 20)
 		{
 			h1 = 1;
+		}
+		else
+		{
+			h1 = 2;
 		}
 		for (m = 0; m < 60; m++)
 		{
@@ -26,7 +30,6 @@ void jack_bauer(void)
 			if (m < 10)
 			{
 				m2 = 0;
-			}
 			else if (m < 20)
 			{
 				m2 = 1;
@@ -50,9 +53,45 @@ void jack_bauer(void)
 			_putchar(h1 + '0');
 			_putchar(h2 + '0');
 			_putchar(':');
-			_putchar(m1 + '0');
 			_putchar(m2 + '0');
+			_putchar(m1 + '0');
 			_putchar('\n');
 		}
+	}
+}
+
+**
+* getmin2 - print the hours and minutes
+* @m int minutes
+* Return: int minutes 
+*/
+
+int getmin2 (int m)
+{
+	int m2;
+
+	if (m < 10)
+	{
+		m2 = 0;
+	}
+	else if (m < 20)
+	{
+		m2 = 1;
+	}
+	else if (m < 30)
+	{
+		m2 = 2;
+	}
+	else if (m < 40)
+	{
+		m2 = 3;
+	}
+	else if (m < 50)
+	{
+		m2 = 4;
+	}
+	else if (m < 60)
+	{
+		m2 = 5;
 	}
 }

@@ -2,7 +2,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
-* void print_to_98 - print theto 98
+* print_to_98 - print theto 98
 * @n: int start value
 * Return: void
 */

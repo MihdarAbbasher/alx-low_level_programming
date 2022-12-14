@@ -17,7 +17,10 @@ int main(void)
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		s = s + tmp;
+		if (b % 2 == 0)
+		{
+			s = s + b;
+		}
 	}
 	printf("%ld\n", s);
 	return (0);

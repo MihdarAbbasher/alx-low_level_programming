@@ -27,29 +27,7 @@ void jack_bauer(void)
 		for (m = 0; m < 60; m++)
 		{
 			m1 = m % 10;
-			if (m < 10)
-			{
-				m2 = 0;
-			else if (m < 20)
-			{
-				m2 = 1;
-			}
-			else if (m < 30)
-			{
-				m2 = 2;
-			}
-			else if (m < 40)
-			{
-				m2 = 3;
-			}
-			else if (m < 50)
-			{
-				m2 = 4;
-			}
-			else if (m < 60)
-			{
-				m2 = 5;
-			}
+			m2 = getmin2(m);
 			_putchar(h1 + '0');
 			_putchar(h2 + '0');
 			_putchar(':');
@@ -94,4 +72,6 @@ int getmin2 (int m)
 	{
 		m2 = 5;
 	}
+	return (m2);
+
 }

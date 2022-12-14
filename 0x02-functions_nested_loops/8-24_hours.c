@@ -2,6 +2,44 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
+* getmin2 - get minutes 2
+* @m int min
+* Return: int minutes
+*/
+
+int getmin2 (int m)
+{
+        int m2;
+
+        if (m < 10)
+        {
+                m2 = 0;
+        }
+        else if (m < 20)
+        {
+                m2 = 1;
+        }
+        else if (m < 30)
+        {
+                m2 = 2;
+        }
+        else if (m < 40)
+        {
+                m2 = 3;
+        }
+        else if (m < 50)
+        {
+                m2 = 4;
+        }
+        else if (m < 60)
+        {
+                m2 = 5;
+        }
+        return (m2);
+
+}
+
+/**
 * jack_bauer  - print the hours and minutes
 * Return: void
 */
@@ -36,42 +74,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-}
-
-**
-* getmin2 - print the hours and minutes
-* @m int minutes
-* Return: int minutes 
-*/
-
-int getmin2 (int m)
-{
-	int m2;
-
-	if (m < 10)
-	{
-		m2 = 0;
-	}
-	else if (m < 20)
-	{
-		m2 = 1;
-	}
-	else if (m < 30)
-	{
-		m2 = 2;
-	}
-	else if (m < 40)
-	{
-		m2 = 3;
-	}
-	else if (m < 50)
-	{
-		m2 = 4;
-	}
-	else if (m < 60)
-	{
-		m2 = 5;
-	}
-	return (m2);
-
 }

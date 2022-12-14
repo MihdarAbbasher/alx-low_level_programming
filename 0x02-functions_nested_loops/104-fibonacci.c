@@ -8,19 +8,19 @@
 int main(void)
 {
 	int i;
-	long a, b, tmp;
+	double a, b, tmp;
 
 	a = 1;
 	b = 2;
-	printf("%ld, %ld, ", a, b);
+	printf("%lf, %lf, ", a, b);
 	for (i = 1; i < 96; i++)
 	{
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		printf("%ld, ", b);
+		printf("%lf, ", b);
 	}
 	tmp = a + b;
-	printf("%ld\n", tmp);
+	printf("%lf\n", tmp);
 	return (0);
 }

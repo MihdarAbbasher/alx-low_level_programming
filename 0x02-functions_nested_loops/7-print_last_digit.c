@@ -6,7 +6,7 @@
 * @c: parameter to check
 * Return: last digit value
 */
-int _abs(int c)
+int print_last_digit(int c)
 {
 	int r;
 

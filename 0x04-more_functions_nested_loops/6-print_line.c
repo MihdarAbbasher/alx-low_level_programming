@@ -6,6 +6,7 @@
 /* betty style doc for function main goes there */
 /**
 * print_line - print last digit
+* @n: length of line
 * Return: void
 */
 

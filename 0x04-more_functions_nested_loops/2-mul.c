@@ -2,8 +2,9 @@
 
 /* betty style doc for function main goes there */
 /**
-* _isdigit - print the alphabet
-* @c: char to check
+* mul - print the alphabet
+* @a: first no
+* @b: first no
 * Return: 0
 */
 int mul(int a, int b)

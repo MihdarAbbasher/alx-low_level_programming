@@ -11,17 +11,24 @@
 
 void more_numbers(void)
 {
-	int i, j, k;
+	int no;
 
-	k = 1;
-	for (i = 0; i < 15; i++)
+	no = 0;
+	while (no < 10)
 	{
-		j = i % 10;
-		if (i > 9)
+		int i, j, k;
+
+		k = 1;
+		for (i = 0; i < 15; i++)
 		{
-			_putchar(k + '0');
+			j = i % 10;
+			if (i > 9)
+			{
+				_putchar(k + '0');
+			}
+			_putchar(j + '0');
 		}
-		_putchar(j + '0');
+		_putchar('\n');
+	no++;
 	}
-	_putchar('\n');
 }

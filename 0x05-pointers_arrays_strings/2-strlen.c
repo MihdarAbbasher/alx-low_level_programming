@@ -3,7 +3,7 @@
  * @s: char pointer
  * return: int len 
 */
-int swap_int(char *s)
+int _strlen(char *s)
 {
 	int i = 0;
 

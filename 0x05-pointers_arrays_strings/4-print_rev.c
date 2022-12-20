@@ -21,9 +21,9 @@ void print_rev(char *s)
 			break;
 		}
 	}
-	while (i >= 0)
+	while (i > 0)
 	{
-		c = *(s + i);
+		c = *(s + i - 1);
 		_putchar(c);
 		i--;
 	}

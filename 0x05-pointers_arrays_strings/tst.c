@@ -19,11 +19,20 @@ int fn(char *s)
         return i;
 }
 
+
+
+
+
+
+
+
 int main(void)
 {
-    char *str;
+    int a;
+    int b;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
+    a = fn("ab s!");
+    b = fn("");
+    printf("a=%d, b=%d\n", a, b);
     return (0);
 }

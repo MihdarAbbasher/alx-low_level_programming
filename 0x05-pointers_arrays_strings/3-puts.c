@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _puts - check the co
  * @s: char pointer
@@ -6,14 +7,14 @@
 void _puts(char *s)
 {
 	int i = 0;
-	char cur;
+	char c;
 
 	while (1 == 1)
 	{
-		cur = *(s + i);
-		if (cur != '\0')
+		c = *(s + i);
+		if (c != '\0')
 		{
-			_putchar(cur + '0');
+			_putchar(c);
 			i += 1;
 		}
 		else

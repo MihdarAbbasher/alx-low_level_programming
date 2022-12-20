@@ -8,7 +8,7 @@
 void print_array(int *s, int n)
 {
 	int i = 0;
-	char c;
+	int c;
 
 	for (i = 0; i < n - 1; i++)
 	{

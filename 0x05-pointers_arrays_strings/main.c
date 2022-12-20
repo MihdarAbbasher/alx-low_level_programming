@@ -1,18 +1,32 @@
-#include "main.h"
+// #include "main.h"
+#include <stdio.h>
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
+void swap_int(int *a, int *b)
+{
+	int tmp;
+	
+	printf("a=%p, *b=%d\n", a, *b);
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+
+
+
+
+
+
+
 int main(void)
 {
-    int r;
+    int a;
+    int b;
 
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
-    _putchar('0' + r);
-    _putchar('\n');
+    a = 98;
+    b = 42;
+    printf("a=%d, b=%d\n", a, b);
+    swap_int(&a, &b);
+    printf("a=%d, b=%d\n", a, b);
     return (0);
 }

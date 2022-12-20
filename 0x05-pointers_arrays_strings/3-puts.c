@@ -10,7 +10,7 @@ void _puts(char *s)
 
 	while (1 == 1)
 	{
-		cur = *(s + i)
+		cur = *(s + i);
 		if (cur != '\0')
 		{
 			_putchar(cur + '0');

@@ -21,10 +21,9 @@ int fn(char *s)
 
 int main(void)
 {
-     char s[10] = "My School";
+     char *str;
 
-    printf("%s\n", s);
-    rev_string(s);
-    printf("%s\n", s);
+    str = "0123456789";
+    puts_half(str);
     return (0);
 }

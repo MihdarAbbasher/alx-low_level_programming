@@ -1,14 +1,22 @@
 // #include "main.h"
 #include <stdio.h>
 
-void swap_int(int *a, int *b)
+int fn(char *s)
 {
-	int tmp;
-	
-	printf("a=%p, *b=%d\n", a, *b);
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+        int i = 0;
+
+        while (1 == 1)
+        {
+                if (*(s + i) != '\0')
+                {
+                        i += 1;
+                }
+	        else
+	        {
+	                break;
+        	}
+        }
+        return i;
 }
 
 
@@ -23,10 +31,8 @@ int main(void)
     int a;
     int b;
 
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
+    a = fn("ab s!");
+    b = fn("");
     printf("a=%d, b=%d\n", a, b);
     return (0);
 }

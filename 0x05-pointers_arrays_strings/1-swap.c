@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - check the co
- * @n: int pointer
+ * @*n: int pointer
  */
 void reset_to_98(int *n)
 {

@@ -6,6 +6,7 @@
 void _puts(char *s)
 {
 	int i = 0;
+	char cur;
 
 	while (1 == 1)
 	{

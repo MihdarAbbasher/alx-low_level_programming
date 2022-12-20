@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * swap_int - check the co
  * @a: int pointer

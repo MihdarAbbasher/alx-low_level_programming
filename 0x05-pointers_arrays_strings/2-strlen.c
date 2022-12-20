@@ -1,7 +1,7 @@
 /**
  * _strlen(char *s)- check the co
  * @s: char pointer
- * return: int len 
+ * Return: int len
 */
 int _strlen(char *s)
 {
@@ -18,5 +18,5 @@ int _strlen(char *s)
 			break;
 		}
 	}
-	return i;
+	return (i);
 }

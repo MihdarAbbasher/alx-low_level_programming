@@ -1,10 +1,15 @@
 #include "main.h"
 
 /**
- * reset_to_98 - check the co
- * @*n: int pointer
- */
-void reset_to_98(int *n)
+ * swap_int - check the co
+ * @a: int pointer
+ * @b: int p
+*/
+void swap_int(int *a, int *b)
 {
-	*n = 98;
+	int *n;
+
+	*n = *a;
+	*a = *b;
+	*b = *n;
 }

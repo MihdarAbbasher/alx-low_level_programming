@@ -34,7 +34,7 @@ int _strlen(char *s)
 int _strcmp(char *dest, char *src)
 {
 	int i, ss, sd, res;
-	
+
 	res = 0;
 	ss = _strlen(src);
 	sd = _strlen(dest);

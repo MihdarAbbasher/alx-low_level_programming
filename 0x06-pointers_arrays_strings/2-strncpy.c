@@ -25,20 +25,23 @@ int _strlen(char *s)
 }
 
 /**
-* _strncat - concatenate str
-ZZ* Return: char *
+* _strncpy - copy str
+* @dest: dest str
+* @src: src str
+* @n: str len
+* Return: char *
 */
-char *_strncat(char *dest, char *src, int n)
-{
-	int i, sd, ss;
 
-	ss = _strlen(src);
-	sd = _strlen(dest);
-	for (i = 0; i < sd; i++)
-	{
-		*(src + ss + i) = *(dest + i);
-	}
-	return (src);
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[i] = src[i];
+	for ( ; i < n; i++)
+		dest[i] = '\0';
+
+	return dest;
 }
 
 

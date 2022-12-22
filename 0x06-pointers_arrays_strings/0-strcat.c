@@ -33,14 +33,16 @@ int _strlen(char *s)
 char *_strcat(char *dest, char *src)
 {
 	int i, sd, ss;
+	char dc;
 
 	ss = _strlen(src);
 	sd = _strlen(dest);
-	for (i = 0; i < sd; i++)
+	for (i = 0; i < ss; i++)
 	{
-		*(src + ss + i) = *(dest + i);
+		dc = *(src + i);
+		*(dest + sd + i) = dc;
 	}
-	*(src + ss + i) = '\0';
-	return (src);
+	*(dest + ss + i) = '\0';
+	return (dest);
 }
 

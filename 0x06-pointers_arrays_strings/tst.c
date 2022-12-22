@@ -26,22 +26,19 @@ int _strlen(char *s)
 
 /**
 * _strncat - concatenate str
-* @dest: dest str
-* @src: src str
-* n: cp len
-* Return: char *
+ZZ* Return: char *
 */
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, sd;
-	char dc;
+	int i, sd, ss;
 
+	ss = _strlen(src);
 	sd = _strlen(dest);
-	for (i = 0; i < n; i++)
+	for (i = 0; i < sd; i++)
 	{
-		dc = *(src + i);
-		*(dest + sd + i) = dc;
+		*(src + ss + i) = *(dest + i);
 	}
-	return (dest);
+	return (src);
 }
+
 

@@ -26,6 +26,8 @@ int _strlen(char *s)
 
 /**
 * _strcat - concatenate str
+* @dest: dest str
+* @src: src str
 * Return: char *
 */
 char *_strcat(char *dest, char *src)

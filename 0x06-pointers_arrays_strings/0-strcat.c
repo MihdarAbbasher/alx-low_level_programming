@@ -42,7 +42,6 @@ char *_strcat(char *dest, char *src)
 		dc = *(src + i);
 		*(dest + sd + i) = dc;
 	}
-	*(dest + ss + i) = '\0';
 	return (dest);
 }
 

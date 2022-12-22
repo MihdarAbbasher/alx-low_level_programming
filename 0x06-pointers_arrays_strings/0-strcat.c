@@ -36,11 +36,10 @@ char *_strcat(char *dest, char *src)
 
 	ss = _strlen(src);
 	sd = _strlen(dest);
-	for (i = 0; i < sd; i++)
+	for (i = 0; i <= sd; i++)
 	{
 		*(src + ss + i) = *(dest + i);
 	}
 	return (src);
 }
-
 

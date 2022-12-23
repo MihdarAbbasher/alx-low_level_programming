@@ -61,6 +61,10 @@ char *cap_string(char *txt)
 	int s, i, is_sep;
 	char ch;
 
+	if (txt[0] >= 'a' && txt[0] <= 'z')
+	{
+		txt[0] -= 32;
+	}
 	s = _strlen(txt) - 1;
 	for (i = 0; i < s; i++)
 	{

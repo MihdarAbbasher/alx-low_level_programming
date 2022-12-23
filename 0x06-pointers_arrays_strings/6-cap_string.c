@@ -33,7 +33,7 @@ int is_word_separator(char ch)
 {
 	int j,  sli, res;
 
-	char li[] = ", ;.!?\n\"\t(){}";
+	char li[] = ", \s;.!?\n\"\t(){}";
 
 	res = 0;
 

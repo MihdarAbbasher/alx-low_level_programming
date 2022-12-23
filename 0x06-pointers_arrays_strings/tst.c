@@ -9,9 +9,14 @@ void print_alphabet(void)
 {
 	int i;
 
-	for (i = 97; i < 123; i++)
+	for (i = 0; i < 50; i++)
 	{
-		_putchar(i);
+		printf("%d: %c\n", i, i);
 	}
-	_putchar('\n');
+	printf("\n");
+}
+
+int main(void)
+{
+print_alphabet();
 }

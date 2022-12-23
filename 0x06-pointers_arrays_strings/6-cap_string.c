@@ -69,7 +69,6 @@ char *cap_string(char *txt)
 		if (is_sep == 1 && ch >= 'a' && ch <= 'z')
 		{
 			txt[i + 1] -= 32;
-			i++;
 		}
 	}
 	return (txt);

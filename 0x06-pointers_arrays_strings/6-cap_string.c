@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int i = 0;
+
 	while (1  == 1)
 	{
 		if (*(s + i) != '\0')
@@ -32,12 +33,12 @@ int is_word_separator(char ch)
 {
 	int j,  sli, res;
 
-	char li [] = ", ;.!?\n\"\t(){}";
-	
+	char li[] = ", ;.!?\n\"\t(){}";
+
 	res = 0;
-	
+
 	sli = _strlen(li);
-		
+
 	for (j = 0; j < sli; j++)
 	{
 		if (ch == li[j])
@@ -51,7 +52,7 @@ int is_word_separator(char ch)
 
 /**
 * cap_string - uppercase word
-* @ch: dest str
+* @txt: dest str
 * Return: 0 or 1
 */
 
@@ -59,13 +60,13 @@ char *cap_string(char *txt)
 {
 	int s, i, is_sep;
 	char ch;
-	
+
 	s = _strlen(txt) - 1;
 	for (i = 0; i < s; i++)
 	{
 		is_sep = is_word_separator(txt[i]);
 		ch = txt[i + 1];
-		if (is_sep == 1 && ch >= 'a' && ch <= 'z') 
+		if (is_sep == 1 && ch >= 'a' && ch <= 'z')
 		{
 			txt[i + 1] -= 32;
 			i++;

@@ -31,8 +31,8 @@ char *_strcpy(char *dest, char *src)
 	ls = _size(src);
 	for (i = 0; i < ls; i++)
 	{
-		dest[i + ld] = src[i];
+		dest[i] = src[i];
 	}
-	dest[i + 1] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }

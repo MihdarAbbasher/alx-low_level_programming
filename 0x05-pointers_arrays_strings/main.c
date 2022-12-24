@@ -1,5 +1,5 @@
-// #include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 int fn(char *s)
 {
@@ -21,9 +21,10 @@ int fn(char *s)
 
 int main(void)
 {
-    char *str;
+    char s[10] = "My School";
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
     return (0);
 }

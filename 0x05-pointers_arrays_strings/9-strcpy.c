@@ -25,14 +25,15 @@ int _size(char *s)
 */
 char *_strcpy(char *dest, char *src)
 {
-	int i, ls, ld;
+	int i, ls;
 
-	ld = _size(dest);
 	ls = _size(src);
-	for (i = 0; i < ls; i++)
+	for (i = 0; i < ls && src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
 	}
+
 	dest[i] = '\0';
+
 	return (dest);
 }

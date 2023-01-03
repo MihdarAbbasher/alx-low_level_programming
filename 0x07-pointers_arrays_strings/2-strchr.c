@@ -40,12 +40,12 @@ char *_strchr(char *s, char b)
 	ptr = NULL;
 	for (i = 0; i < l; i++)
 	{
-		if (*(s + i) == b)
+		if (s[i] == b)
 		{
 			ptr = s + i;
 			return (ptr);
 		}
 	}
-	return (NULL);
+	return (ptr);
 }
 

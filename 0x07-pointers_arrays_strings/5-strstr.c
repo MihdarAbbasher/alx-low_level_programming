@@ -28,6 +28,7 @@ int _strlen(char *s)
  * isExist - check the code
  * @s: array
  * @start: start
+ * @l: length
  * @accept: char to be written
  * Return: 0 or 1
  */
@@ -60,7 +61,7 @@ char *_strstr(char *haystack, char *needle)
 
 	res = NULL;
 	l = _strlen(needle);
-	lh = _strlen(haystack);	
+	lh = _strlen(haystack);
 	found = 0;
 	for (i = 0; i <= lh - l; i++)
 	{

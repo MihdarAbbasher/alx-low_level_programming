@@ -43,7 +43,7 @@ char *_strchr(char *s, char b)
 		if (s[i] == b)
 		{
 			ptr = s + i;
-			return (ptr);
+			break;
 		}
 	}
 	return (ptr);

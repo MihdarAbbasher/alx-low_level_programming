@@ -31,10 +31,9 @@ int _strlen(char *s)
  * @accept: char to be written
  * Return: 0 or 1
  */
-int *isExist(char *s, char *accept, int start, int l)
+int isExist(char *s, char *accept, int start, int l)
 {
-	int i, j, s;
-	char *res;
+	int i, res;
 
 	res = 1;
 	for (i = 0; i < l; i++)
@@ -63,15 +62,15 @@ char *_strstr(char *haystack, char *needle)
 	l = _strlen(needle);
 	lh = _strlen(haystack);	
 	found = 0;
-	for (i = 0; i < lh - l; i++)
+	for (i = 0; i <= lh - l; i++)
 	{
 		found = isExist(haystack, needle, i, l);
+
 		if (found == 1)
 		{
 			res = haystack + i;
 			break;
 		}
 	}
-
 	return (res);
 }

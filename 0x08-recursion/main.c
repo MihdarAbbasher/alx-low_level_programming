@@ -11,7 +11,7 @@
 int main(void)
 {
 
-	_puts_recursion("uij");
+	_puts_recursion("");
     return (0);
     
     /*

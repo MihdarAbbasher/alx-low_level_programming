@@ -10,8 +10,10 @@
  */
 int main(void)
 {
+ int n;
 
-	_puts_recursion("");
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
     return (0);
     
     /*

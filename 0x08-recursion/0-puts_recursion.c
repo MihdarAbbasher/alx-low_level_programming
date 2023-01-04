@@ -1,31 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 
-
-/**
- * _strlen(char *s)- check the co
- * @s: char pointer
- * Return: int len
-*/
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (1 == 1)
-	{
-		if (*(s + i) != '\0')
-		{
-			i += 1;
-		}
-		else
-		{
-			break;
-		}
-	}
-	return (i);
-}
-
-
 /**
  * _puts_recursion - print the code
  * @s: array
@@ -33,19 +8,18 @@ int _strlen(char *s)
  */
 void _puts_recursion(char *s)
 {
-	char c;
-	int l;
+	char c;	
 
-	l = _strlen(s);
 	c = *s;
-	if (l > 0)
+	if (*(s + 1) != '\0')
 	{
 		_putchar(c);
 		_puts_recursion(s + 1);
 	}
 	else
 	{
-		_putchar('\n');
+		_putchar(c);
+		_putchar('\n');		
 		return;
 	}
 }

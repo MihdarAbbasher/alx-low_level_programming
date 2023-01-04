@@ -11,7 +11,7 @@ void _puts_recursion(char *s)
 	char c;
 
 	c = *s;
-	if (*s == "")
+	if (s[0] == '\n')
 	{
 		return;
 	}

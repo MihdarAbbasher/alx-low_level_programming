@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _puts_recursion - print the code
+ * factorial - print the code
  * @n: number
  * Return: int fact
  */
@@ -10,14 +10,14 @@ int factorial(int n)
 {
 	if (n == 0)
 	{
-		return(1);
+		return (1);
 	}
 	else if (n < 0)
 	{
-		return(-1);
+		return (-1);
 	}
 	else
 	{
-		return(n * factorial(n - 1));	
+		return(n * factorial (n - 1));	
 	}
 }

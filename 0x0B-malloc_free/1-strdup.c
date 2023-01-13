@@ -35,23 +35,15 @@ char *_strdup(char *str)
 {
 	char *ptr;
 	int i, j;
-	char c[1];
 
-	
-	
 	if (str == NULL)
 	{
 		return (str);
 	}
-	j = _strlen(str);
-	if (j == 0)
-	{
-		c[0] = '\0';
-		ptr = c;
-		return(ptr);
-	}
+	
 	else
 	{
+		j = _strlen(str);
 		ptr = malloc(j * 2 + 1);
 		if (ptr != NULL)
 		{

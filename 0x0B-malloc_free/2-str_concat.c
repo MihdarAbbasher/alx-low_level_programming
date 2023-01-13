@@ -3,26 +3,27 @@
 #include <stdlib.h>
 
 /**
- * create_array - check the code
- * @size: arg count
- * @c: arg vector
+ * str_concat - check the code
+ * @s1: str
+ * @s1: str
  * Return: Always ptr or null.
  */
 
-char *create_array(unsigned int size, char c)
+char *str_concat(char *s1, char *s2)
 {
 	char *ptr;
-	unsigned int i;
+	int i, j;
 
-	ptr = malloc(sizeof(c) * size);
+	j = _strlen(str);
+	ptr = malloc(sizeof(str) * j * 2);
 	if (ptr != NULL)
 	{
-		for (i = 0; i < size; i++)
+		for (i = 0; i <= j; i++)
 		{
-			*(ptr + i) = c;
+			*(ptr + i) = *(str + i);
 		}
 	}
-	if (size == 0)
+	if (j == 0)
 	{
 		ptr = NULL;
 	}

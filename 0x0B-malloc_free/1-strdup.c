@@ -27,7 +27,7 @@ int _strlen(char *s)
 
 /**
  * _strdup - check the code
- * @str: 
+ * @str: str
  * Return: Always ptr or null.
  */
 
@@ -45,7 +45,7 @@ char *_strdup(char *str)
 			*(ptr + i) = *(str + i);
 		}
 	}
-	if (j == 0)
+	if (str == "" || str == NULL)
 	{
 		ptr = NULL;
 	}

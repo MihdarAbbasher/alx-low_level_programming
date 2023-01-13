@@ -30,7 +30,7 @@ int _strlen(char *s)
 /**
  * str_concat - check the code
  * @s1: str
- * @s1: str
+ * @s2: str
  * Return: Always ptr or null.
  */
 
@@ -63,11 +63,11 @@ char *str_concat(char *s1, char *s2)
 		{
 			*(ptr + i) = *(s1 + i);
 		}
-		for (j = 0; j <= l2; j++)
+		for (j = 0; j < l2; j++)
 		{
 			*(ptr + i + j) = *(s2 + j);
 		}
 	}
-	
+
 	return (ptr);
 }

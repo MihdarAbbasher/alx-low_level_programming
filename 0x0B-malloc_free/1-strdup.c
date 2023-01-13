@@ -45,7 +45,7 @@ char *_strdup(char *str)
 			*(ptr + i) = *(str + i);
 		}
 	}
-	if (str == NULL or j == 0)
+	if (str == NULL || j == 0)
 	{
 		ptr = NULL;
 	}

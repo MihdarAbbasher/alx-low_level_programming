@@ -3,28 +3,31 @@
 #include <stdlib.h>
 
 /**
- * create_array - check the code
- * @size: arg count
- * @c: arg vector
+ * alloc_grid - check the code
+ * @width: arg count
+ * @height: arg vector
  * Return: Always ptr or null.
  */
 
-char *create_array(unsigned int size, char c)
+int **alloc_grid(int width, int height)
 {
 	char *ptr;
-	unsigned int i;
+	int i, j;
 
-	ptr = malloc(sizeof(c) * size);
+	if (width <= 0 || height <= 0)
+	{
+		return (NULL);
+	}
+	ptr = malloc(sizeof(int) * height * width);
 	if (ptr != NULL)
 	{
-		for (i = 0; i < size; i++)
+		for (i = 0; i < height; i++)
 		{
-			*(ptr + i) = c;
+			for (j = 0; j < width; j++)
+			{
+				*(ptr + i + j) = 0;
+			}
 		}
-	}
-	if (size == 0)
-	{
-		ptr = NULL;
 	}
 	return (ptr);
 }

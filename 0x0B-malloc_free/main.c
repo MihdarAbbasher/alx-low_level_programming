@@ -32,18 +32,17 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
+char *s;
 
-  char *s;
-
-	s = _strdup("");
-	if (s == NULL)
-	{
-		printf("failed to allocate memory\n");
-		return (1);
-	}
-	free(s);
-	return (0);
-
+    s = str_concat("Betty ", "Holberton");
+    if (s == NULL)
+    {
+        printf("failed\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+    return (0);
 }
 
 

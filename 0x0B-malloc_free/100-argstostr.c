@@ -91,14 +91,20 @@ char *argstostr(int ac, char **av)
 	int i, l;
 	char *p;
 
-	p = "";
-	for (i = 0; i < ac; i++)
+	if (ac > 0)
 	{
-		p = str_concat(p, av[i]);
+		p = "";
+		for (i = 0; i < ac; i++)
+		{
+			p = str_concat(p, av[i]);
+		}
+		l = _strlen(p);
+		*(p + l) = '\n';
+		return (p);
 	}
-	l = _strlen(p);
-	*(p + l) = '\n';
-	return (p);
-
+	else
+	{
+		return (NULL);
+	}
 }
 

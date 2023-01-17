@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /* betty style doc for function main goes there */
 /**
@@ -50,7 +51,8 @@ int main(void)
 	l = _strlen(s);
 	for (i = 0; i < l; i++)
 	{
-		_putchar(i);
+		_putchar(s[i]);
 	}
+	_putchar('\n');
 	return (0);
 }

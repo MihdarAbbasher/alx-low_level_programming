@@ -1,10 +1,10 @@
 #ifndef struct_dog
 #define struct_dog
-/** 
+/**
  * struct dog - struct dog
  * @name: char pointer
  * @age: int age
- * @owner: char pointer 
+ * @owner: char pointer owner
 */
 
 struct dog

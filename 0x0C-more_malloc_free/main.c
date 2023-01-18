@@ -3,75 +3,45 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <string.h>
-
 void simple_print_buffer(char *buffer, unsigned int size)
 {
-        unsigned int i;
+    unsigned int i;
 
-        i = 0;
-        while (i < size)
-        {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
-                i++;
-        }
-        printf("\n");
-}
-
-
-/**
- * print_grid - prints a grid of integers
- * @grid: the address of the two dimensional grid
- * @width: width of the grid
- * @height: height of the grid
- *
- * Return: Nothing.
- */
-void print_grid(int **grid, int width, int height)
-{
-    int w;
-    int h;
-
-    h = 0;
-    while (h < height)
+    i = 0;
+    while (i < size)
     {
-        w = 0;
-        while (w < width)
+        if (i % 10)
         {
-            printf("%d ", grid[h][w]);
-            w++;
+            printf(" ");
         }
-        printf("\n");
-        h++;
-    }   
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
 }
 
-
 /**
- * main - check the code
+ * main - check the code for
  *
  * Return: Always 0.
  */
 int main(void)
 {
-   char *a;
+    char *p;
+    int i;
 
-    a = _calloc(98, sizeof(char));
-    strcpy(a, "Best");
-    strcpy(a + 4, " School! :)\n");
-    a[97] = '!';
-    simple_print_buffer(a, 98);
-    free(a);
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+    i = 0;
+    while (i < 98)
+    {
+        p[i++] = 98;
+    }
+    simple_print_buffer(p, 98);
+    free(p);
     return (0);
-    
-    
 }
-
-

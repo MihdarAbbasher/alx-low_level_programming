@@ -5,7 +5,7 @@
 /**
  * _calloc - check the code
  * @nmemb: arg count
- * @size: arg count 
+ * @size: arg count
  * Return: Always ptr or null.
  */
 

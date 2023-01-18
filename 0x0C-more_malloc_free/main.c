@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <string.h>
 
 void simple_print_buffer(char *buffer, unsigned int size)
 {
@@ -60,11 +61,14 @@ void print_grid(int **grid, int width, int height)
  */
 int main(void)
 {
-    char *concat;
+   char *a;
 
-    concat = string_nconcat("Best ", "School !!!", 6);
-    printf("%s\n", concat);
-    free(concat);
+    a = _calloc(98, sizeof(char));
+    strcpy(a, "Best");
+    strcpy(a + 4, " School! :)\n");
+    a[97] = '!';
+    simple_print_buffer(a, 98);
+    free(a);
     return (0);
     
     

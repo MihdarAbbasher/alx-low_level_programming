@@ -3,19 +3,32 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - check the code
- * @b: arg count
+ * _calloc - check the code
+ * @nmemb: arg count
+ * @size: arg count 
  * Return: Always ptr or null.
  */
 
-void *malloc_checked(unsigned int b)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	unsigned int *p;
+	unsigned int i;
 
-	ptr = malloc(b * sizeof(int));
+	if (size * nmemb == 0)
+	{
+		return (NULL);
+	}
+	ptr = malloc(nmemb * size);
+	p = ptr;
 	if (ptr != NULL)
 	{
+		for (i = 0; i < nmemb * size; i++)
+		{
+			*(p + i) = 0;
+		}
 		return (ptr);
 	}
-	exit(98);
+	printf("out");
+	return (NULL);
 }

@@ -3,19 +3,27 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - check the code
- * @b: arg count
+ * array_range - check the code
+ * @min: arg min
+ * @max: arg max
  * Return: Always ptr or null.
  */
 
-void *malloc_checked(unsigned int b)
+int *array_range(int min, int max)
 {
-	void *ptr;
+	int *ptr, i;
 
-	ptr = malloc(b * sizeof(int));
+	if (min > max)
+	{
+		return (NULL);
+	}
+	ptr = malloc((max - min + 1) * sizeof(int));
 	if (ptr != NULL)
 	{
-		return (ptr);
+		for (i = min; i <= max; i++)
+		{
+			*(ptr + i - min) = i;
+		}
 	}
-	exit(98);
+	return (ptr);
 }

@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-      print_strings(", ", 4, "Jay", "Django", "", "last");
+     
+    print_all("ceiss", 'B', 3, "", "stSchool");
     return (0);
-    
     
 }

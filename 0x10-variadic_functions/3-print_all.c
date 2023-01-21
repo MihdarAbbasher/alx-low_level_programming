@@ -24,11 +24,10 @@ void print_str(char *c)
 	if (*c != '\0')
 	{
 		printf("%s", c);
+		return;
 	}
-	else
-	{
-		printf("(nil)");
-	}
+	printf("(nil)");
+
 }
 /**
 * print_all - check the code
@@ -51,28 +50,26 @@ void print_all(const char * const format, ...)
 		{
 			case 'i':
 			printf("%i", va_arg(ap, int));
-			print_sep(format[i + 1]);
 			break;
 			case 'c':
 			printf("%c", va_arg(ap, int));
-			print_sep(format[i + 1]);
 			break;
 			case 'f':
 			vp = va_arg(ap, int*);
 			fp = vp;
 			printf("%f\n", *fp);
-			print_sep(format[i + 1]);
 			break;
 			case 's':
 			vp = va_arg(ap, int*);
 			cp = vp;
 			print_str(cp);
 			printf("%s", cp);
-			print_sep(format[i + 1]);
 			break;
 			default:
 			break;
 		}
+		
+		print_sep(format[i + 1]);
 		i++;
 	}
 	va_end(ap);

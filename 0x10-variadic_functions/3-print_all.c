@@ -68,7 +68,6 @@ void print_all(const char * const format, ...)
 			default:
 			break;
 		}
-		
 		print_sep(format[i + 1]);
 		i++;
 	}

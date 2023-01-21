@@ -9,7 +9,7 @@
 int main(void)
 {
      
-    print_all("ceiss", 'B', 3, "", "stSchool");
+    print_strings(", ", 4, "B", "hh", "", "stSchool");
     return (0);
     
 }

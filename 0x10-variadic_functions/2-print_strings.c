@@ -24,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			cp = vp;
 			if (*cp == '\0')
 			{
-				cp = "nil ";
+				cp = "null";
 			}
 			printf("%s", cp);
 			if ((i < n - 1) && (separator != NULL))

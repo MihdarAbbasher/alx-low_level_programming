@@ -8,7 +8,7 @@
 */
 void print_sep(char c)
 {
-	if (c != '\0')
+	if ((c == 'i') || (c == 'f') || (c == 's') || (c == 'c'))
 	{
 		printf(", ");
 	}

@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include "dog.h"
-
 /**
 * print_name - check the code
 * @f: dog object

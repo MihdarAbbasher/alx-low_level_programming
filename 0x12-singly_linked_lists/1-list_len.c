@@ -15,12 +15,12 @@ size_t list_len(const list_t *h)
 	if (h != NULL)
 	{
 		res += 1;
-	}
-	node = h->next;
-	while (node != NULL)
-	{
-		res += 1;
-		node = node->next;
+		node = h->next;
+		while (node != NULL)
+		{
+			res += 1;
+			node = node->next;
+		}
 	}
 	return (res);
 }

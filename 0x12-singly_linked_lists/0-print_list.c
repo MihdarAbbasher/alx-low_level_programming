@@ -23,21 +23,21 @@ size_t print_list(const list_t *h)
 		{
 			printf("[%u] %s\n", h->len, h->str);
 		}
-	}
-	node = h->next;
-	while (node != NULL)
-	{
-		res += 1;
-		if (node->str == NULL)
+		node = h->next;
+		while (node != NULL)
 		{
-			printf("[0] (nil)\n");
-		}
-		else
-		{
-			printf("[%u] %s\n", node->len, node->str);
-		}
-		node = node->next;
+			res += 1;
+			if (node->str == NULL)
+			{
+				printf("[0] (nil)\n");
+			}
+			else
+			{
+				printf("[%u] %s\n", node->len, node->str);
+			}
+			node = node->next;
 
+		}
 	}
 	return (res);
 }

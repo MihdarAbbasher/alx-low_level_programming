@@ -4,11 +4,11 @@
 
 
 /**
- * _strlen(char *s)- check the co
+ * len(char *s)- check the co
  * @s: char pointer
  * Return: int len
 */
-int _strlen(char *s)
+int len(char *s)
 {
 	int i = 0;
 
@@ -28,83 +28,83 @@ int _strlen(char *s)
 
 
 /**
- * str_concat - check the code
- * @s1: str
- * @s2: str
- * Return: Always ptr or null.
- */
+*strtow - splits a stirng into words
+*@str: string to be splitted
+*
+*Return: pointer to the array of splitted words
+*/
 
-char *str_concat(char *s1, char *s2)
+char **strtow(char *str)
 {
-	char *ptr;
-	int i, j, l, l1, l2;
+	char **split;
+	int i, j = 0, temp = 0, size = 0, words = num_words(str);
 
-	if (s1 == NULL)
+	if (words == 0)
+		return (NULL);
+	split = (char **) malloc(sizeof(char *) * (words + 1));
+	if (split != NULL)
 	{
-		l1 = 0;
+		for (i = 0; i <= len(str) && words; i++)
+		{
+			if ((str[i] != ' ') && (str[i] != '\0'))
+				size++;
+			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+			{
+				split[j] = (char *) malloc(sizeof(char) * size + 1);
+				if (split[j] != NULL)
+				{
+				while (temp < size)
+				{
+					split[j][temp] = str[(i - size) +temp];
+					temp++;
+				}
+				split[j][temp] = '\0';
+				size = temp = 0;
+				j++;
+				}
+				else
+				{
+					while (j-- >= 0)
+					free(split[j]);
+					free(split);
+					return (NULL);
+				}
+			}
+		}
+		split[words] = NULL;
+		return (split);
 	}
 	else
-	{
-		l1 = _strlen(s1);
-	}
-	if (s2 == NULL)
-	{
-		l2 = 0;
-	}
-	else
-	{
-		l2 = _strlen(s2);
-	}
-	l = l1 + l2;
-	ptr = (char *) malloc(sizeof(char) * l + 2);
-	if (ptr != NULL)
-	{
-		for (i = 0; i < l1; i++)
-		{
-			*(ptr + i) = *(s1 + i);
-		}
-		if (l1 > 0)
-		{
-			*(ptr + i) = '\n';
-			j = 1;
-		}
-		for (i = 0; i < l2; i++)
-		{
-			*(ptr + l1 + i + j) = *(s2 + i);
-		}
-		*(ptr + l1 + i + j) = '\0';
-	}
-
-	return (ptr);
+		return (NULL);
 }
 
+
 /**
- * argstostr - check the code
- * @ac: str
- * @av: str
- * Return: Always ptr or null.
- */
-
-
-char *argstostr(int ac, char **av)
+* num_words - counts the number of words in str
+*@str: string to be used
+*
+*Return: number of words
+*/
+int num_words(char *str)
 {
-	int i, l;
-	char *p;
+	int i = 0, words = 0;
 
-	if (ac > 0)
+	while (i <= len(str))
 	{
-		p = "";
-		for (i = 0; i < ac; i++)
+		if ((str[i] != ' ') && (str[i] != '\0'))
 		{
-			p = str_concat(p, av[i]);
+			i++;
 		}
-		l = _strlen(p);
-		*(p + l) = '\n';
-		return (p);
+		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+		{
+			words += 1;
+			i++;
+		}
+		else
+		{
+			i++;
+		}
 	}
-	else
-	{
-		return (NULL);
-	}
+	return (words);
 }
 

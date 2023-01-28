@@ -10,7 +10,7 @@
 */
 void free_list(list_t *head)
 {
-	list_t *node, *tmp;
+	list_t *tmp;
 
 	while (head)
 	{

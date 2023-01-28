@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #include "main.h"
-
+int check_palindrome(char *s, int len, int index);
 /**
 * is_palindrome - returns true if the given string is a palindrome
 *@s: string to check

@@ -4,39 +4,29 @@
 #include <stdlib.h>
 
 /**
-* free_list_end - check the code
-* @head: list ptr
-* Return: Always list.
-*/
-void free_list_end(list_t *head)
-{
-	list_t *tmp;
-
-	if (head == NULL)
-	{
-		return;
-	}
-	else
-	{
-		tmp = head;
-		while (tmp->next != NULL)
-		{
-			tmp = tmp->next;
-		}
-		tmp = NULL;
-	}
-}
-
-
-/**
 * free_list - check the code
 * @head: list ptr
 * Return: Always list.
 */
-void free_list(list_t *head)
+void free_list(list_t *h)
 {
-	while (head != NULL)
+	list_t *node, *tmp;
+
+	if (h == NULL)
 	{
-		free_list_end(head);
+		return;
 	}
+	else if (h->next == NULL)
+	{
+		h = NULL;
+		return;
+	}
+	node = h;
+	while (node->next != NULL)
+	{
+		tmp = node->next;
+		free(node);
+		node = tmp;
+	}
+	free(node);
 }

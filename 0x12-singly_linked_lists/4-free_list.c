@@ -8,7 +8,7 @@
 * @head: list ptr
 * Return: Always list.
 */
-void free_list(list_t *h)
+void free_list(list_t *head)
 {
 	list_t *node, *tmp;
 

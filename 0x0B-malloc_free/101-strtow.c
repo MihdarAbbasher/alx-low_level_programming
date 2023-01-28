@@ -28,6 +28,36 @@ int len(char *s)
 
 
 /**
+* num_words - counts the number of words in str
+*@str: string to be used
+*
+*Return: number of words
+*/
+int num_words(char *str)
+{
+	int i = 0, words = 0;
+
+	while (i <= len(str))
+	{
+		if ((str[i] != ' ') && (str[i] != '\0'))
+		{
+			i++;
+		}
+		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+		{
+			words += 1;
+			i++;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return (words);
+}
+
+
+/**
 *strtow - splits a stirng into words
 *@str: string to be splitted
 *
@@ -76,35 +106,5 @@ char **strtow(char *str)
 	}
 	else
 		return (NULL);
-}
-
-
-/**
-* num_words - counts the number of words in str
-*@str: string to be used
-*
-*Return: number of words
-*/
-int num_words(char *str)
-{
-	int i = 0, words = 0;
-
-	while (i <= len(str))
-	{
-		if ((str[i] != ' ') && (str[i] != '\0'))
-		{
-			i++;
-		}
-		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
-		{
-			words += 1;
-			i++;
-		}
-		else
-		{
-			i++;
-		}
-	}
-	return (words);
 }
 

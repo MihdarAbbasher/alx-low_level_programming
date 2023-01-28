@@ -2,22 +2,32 @@
 #include <stdio.h>
 
 /**
- * _sqrt_recursion - print the code
- * @x: number
- * Return: int fact
- */
-int _sqrt_recursion(int x)
+* _sqrt_recursion - returns the natural square root of a number
+* @n: number to be used
+*
+* Return: the square root of n
+*/
+
+int _sqrt_recursion(int n)
 {
-	if (y < 0)
-	{
+	if (n == 0 || n == 1)
+		return (n);
+	return (_sqrt(0, n));
+}
+
+/**
+ * _sqrt - returns the square root of a number
+ * @n: test number
+ * @x: squared number
+ *
+ * Return: the square root of n
+ */
+
+int _sqrt(int n, int x)
+{
+	if (n > x / 2)
 		return (-1);
-	}
-	else if (y == 0)
-	{
-		return (1);
-	}
-	else
-	{
-		return (x * _pow_recursion(x, y - 1));
-	}
+	else if (n * n == x)
+		return (n);
+	return (_sqrt(n + 1, x));
 }

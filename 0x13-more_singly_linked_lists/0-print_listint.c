@@ -3,19 +3,28 @@
 
 /**
 * print_listint - check the code
-* @h: int
+* @head: int
 * Return: Always int.
 */
-size_t print_listint(const listint_t *h)
+size_t print_listint(const listint_t *head)
 {
 	unsigned int res;
+	const listint_t *h;
 
+	h = head;
 	res = 0;
-	while (h != NULL)
+	if (h == NULL)
 	{
-		res += 1;
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("(nil)\n");
+	}
+	else
+	{
+		while (h != NULL)
+		{
+			res += 1;
+			printf("%d\n", h->n);
+			h = h->next;
+		}
 	}
 	return (res);
 }

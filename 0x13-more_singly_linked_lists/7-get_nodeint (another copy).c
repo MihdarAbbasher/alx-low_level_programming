@@ -10,8 +10,8 @@
  */
 int main(void)
 {
-listint_t *head;
-    listint_t *node;
+     listint_t *head;
+    int n;
 
     head = NULL;
     add_nodeint_end(&head, 0);
@@ -23,13 +23,13 @@ listint_t *head;
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
-    node = get_nodeint_at_index(head, 5);
-    printf("5: %d\n", node->n);
-    node = get_nodeint_at_index(head, 3);
-    printf("3: %d\n", node->n);
-    node = get_nodeint_at_index(head, 0);
-    printf("0: %d\n", node->n);
-  free_listint2(&head);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
+    print_listint(head);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
+    print_listint(head);
+    free_listint2(&head);
+    printf("%p\n", (void *)head);
     return (0);
-    
 }

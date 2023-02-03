@@ -19,8 +19,8 @@ int get_bit(unsigned long int n, unsigned int index)
 /**
  * flip_bits - set bit to 1 at index
  * Return: 1 if worked, -1 if failed
- * @n: pointer to number
- * @index: given index
+ * @n:  number
+ * @m: given number2
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {

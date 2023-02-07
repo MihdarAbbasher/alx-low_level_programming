@@ -2,43 +2,36 @@
 #include "main.h"
 #include <stdlib.h>
 #include <unistd.h>
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
 
 /**
- * read_textfile - read text file.
- * @filename: is a pointer to a file
+ * read_textfile - writes the text to stdout
+ * @filename: The character to print
  * @letters: size
- * Return: size.
+ * Return: On success size.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *myfp;
-	unsigned int c, i;
+	int fd;
+	int cr, cw;
+	char *s;
 
-	i = 0;
 	if (filename == NULL)
 		return (0);
-	myfp = fopen(filename, "r");
-	while (i < letters)
-	{
-		c = fgetc(myfp);
-		if (feof(myfp))
-			break;
-		_putchar(c);
-		i++;
-	}
-	fclose(myfp);
-	return (i);
+	fd = open(filename, O_RDWR);
+	if (fd < 0)
+		return (0);
+	s = (char *) malloc(letters * sizeof(char));
+	cr = read(fd, s, letters);
+	cw = write(1, s, letters);
+	if (cw < 0)
+		return (0);
+	close(fd);
+	return (cr);
 }
 

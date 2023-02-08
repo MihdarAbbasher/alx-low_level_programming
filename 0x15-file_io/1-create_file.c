@@ -1,11 +1,11 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-
 
 /**
  * _strlen - len of string.
@@ -40,7 +40,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content == NULL)
 		text_content = "";
-	fd = open(filename, O_CREAT |O_WRONLY | O_TRUNC, 00600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
 	if (fd < 0)
 		return (-1);
 	letters = _strlen(text_content);

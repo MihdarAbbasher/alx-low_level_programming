@@ -29,7 +29,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	nptr = malloc(new_size);
 	p = nptr;
 	pp = ptr;
-	for (i = 0; i < new_size; i++)
+	for (i = 0; i < new_size && i < old_size; i++)
 	{
 		*(p + i) = *(pp + i);
 	}

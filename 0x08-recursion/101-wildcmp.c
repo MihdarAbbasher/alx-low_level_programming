@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* wildcmp - compares two strings and returns 1 if identical
+* wildcmp - compares two strings and returns 1 if they are identical
 * @s1: string to be checked
 * @s2: pattern to be used
 *
@@ -17,6 +17,6 @@ int wildcmp(char *s1, char *s2)
 		return (*s1 != '\0' && wildcmp(s1 + 1, s2 + 1));
 	if (*s2 == '*')
 		return (wildcmp(s1, s2 + 1) || (*s1 != '\0' && wildcmp(s1 + 1, s2)));
-	
+
 return (0);
 }

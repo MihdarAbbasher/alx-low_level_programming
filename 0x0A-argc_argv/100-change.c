@@ -28,6 +28,11 @@ int main(int argc, char *argv[])
 	else
 	{
 		a = atoi(argv[1]);
+		if (a < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
 		res = get_res(a);
 		printf("%d\n", res);
 	}
@@ -43,7 +48,6 @@ int main(int argc, char *argv[])
 int get_res(int a)
 {
 	int res;
-
 
 	res = 0;
 	if (a >= 25)

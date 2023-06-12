@@ -5,13 +5,25 @@
 * print_alphabet - print the alphabet
 * Return: void
 */
-void print_alphabet(void)
+void main(void)
 {
-	int i;
+	int i, a, res;
 
-	for (i = 97; i < 123; i++)
+	res = 0;
+	for (i = 1; i < 11; i++)
 	{
-		_putchar(i);
+		printf("2 x %d = \n", i);
+		printf("\n");
+		scanf("%d", &a);
+		if (a == (2 * i))
+		{
+			res++;
+			printf(" الاجابة صحيحة\n");
+		}
+		else
+		{
+			printf("X الاجابة خطأ\n");
+		}
 	}
-	_putchar('\n');
+	printf("درجتك هي \n %d\n", res);
 }

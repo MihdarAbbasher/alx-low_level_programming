@@ -70,10 +70,10 @@ int _pow_recursion(int x, int y)
 * @s: char to check
 * Return: 0
 */
-int onlydigits(char* s)
+int onlydigits(char *s)
 {
 	int l, i;
-	
+
 	l = _strlen(s);
 	for (i = 0; i < l; i++)
 	{
@@ -91,10 +91,10 @@ int onlydigits(char* s)
  * Return: Always int.
  */
 
-unsigned int str_to_int(char* dest)
+unsigned int str_to_int(char *dest)
 {
 	unsigned int n, ss, dc, res, i, tmp;
-	
+
 	n = _strlen(dest);
 	ss = n / 2;
 	for (i = 0; i < ss; i++)
@@ -108,7 +108,7 @@ unsigned int str_to_int(char* dest)
 	{
 		tmp = _pow_recursion(10, i);
 		res += tmp * (dest[i] - 48);
-	
+
 	}
 	return (res);
 }

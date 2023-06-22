@@ -1,4 +1,3 @@
-
 /**
 * print_name - check the code
 * @f: dog object
@@ -7,8 +6,9 @@
 */
 void print_name(char *name, void (*f)(char *))
 {
-	if (*name != '\0')
+	if (name == NULL || f == NULL)
 	{
-		f(name);
+		return;
 	}
+	f(name);
 }

@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
 /**
 * op_add - add int
 * @a: arr object
@@ -28,7 +30,10 @@ int op_sub(int a, int b)
 */
 int op_div(int a, int b)
 {
-	return (a / b);
+	if (b != 0)
+		return (a / b);
+	printf("Error\n");
+	exit(100);
 }
 
 /**
@@ -39,7 +44,10 @@ int op_div(int a, int b)
 */
 int op_mod(int a, int b)
 {
-	return (a % b);
+	if (b != 0)
+		return (a % b);
+	printf("Error\n");
+	exit(100);
 }
 
 /**

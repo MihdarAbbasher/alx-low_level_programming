@@ -8,16 +8,17 @@
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i, res, tmp;
+	int i, tmp;
 
-	res = -1;
-	for (i = 0; i < size; i++)
+	if (array && size && cmp)
 	{
-		tmp = cmp(array[i]);
-		if (tmp != 0)
+		for (i = 0; i < size; i++)
 		{
-			res = i;
-			break;
+			tmp = cmp(array[i]);
+			if (tmp)
+			{
+				return (i);
+			}
 		}
 	}
 	return (res);

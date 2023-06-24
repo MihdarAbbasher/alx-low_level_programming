@@ -28,8 +28,6 @@ int main(int ac, char *argv[])
 	}
 	result = p(n1, n2);
 	printf("%d\n", result);
-	return (0);  
-	    
 	return (0);
 }
 

@@ -2,8 +2,7 @@
 #include <string.h>
 /**
 * get_op_func - add int
-* @a: arr object
-* @b: size
+* @s: operator
 * Return: Always int.
 */
 int (*get_op_func(char *s))(int a, int b)

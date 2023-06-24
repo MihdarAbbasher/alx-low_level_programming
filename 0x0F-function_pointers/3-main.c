@@ -2,6 +2,8 @@
 /**
  * main - check the code
  *
+ * @ac: the number of the parameters
+ * @argv: the parameters in the case the number to be calculated.
  * Return: Always 0.
  */
 int main(int ac, char *argv[])

@@ -1,76 +1,101 @@
-#include <stdio.h>
-#include "stdarg.h"
-
+#include "variadic_functions.h"
 /**
-* print_sep - check the code
-* @c: *char
-* Return: Always int.
+ * integer_print - print integers.
+(* a blank line
+*@args: the list of parameters
+* Description: this function prints integers)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return:no return a void func.
 */
-void print_sep(char c)
+void integer_print(va_list args)
 {
-	if ((c == 'i') || (c == 'f') || (c == 's') || (c == 'c'))
-	{
-		printf(", ");
-	}
+	printf("%d", va_arg(args, int));
+}
+/**
+ * char_print - print chars.
+(* a blank line
+*@args: the list of parameters
+* Description: this function prints chars)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return:no return a void func.
+ */
+void char_print(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+/**
+ * string_print - print strings
+(* a blank line
+*@args: the list of parameters
+* Description: this function prints strings)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return:no return a void func.
+*/
+
+void string_print(va_list args)
+{
+	char *s;
+
+	s = va_arg(args, char *);
+	if (s == NULL)
+		s = "(nil)";
+	printf("%s", s);
 }
 
 /**
-* print_str - check the code
-* @c: *char
-* Return: Always int.
-*/
-void print_str(char *c)
+ * float_print - print floats.
+(* a blank line
+*@args: the list of parameters
+* Description: this function prints floats)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return:no return a void func.
+ */
+void float_print(va_list args)
 {
-	if (*c != '\0')
-	{
-		printf("%s", c);
-		return;
-	}
-	printf("(nil)");
-
+	printf("%f", va_arg(args, double));
 }
 /**
-* print_all - check the code
-* @format: *char
-* Return: Always int.
+ * print_all - print anything.
+(* a blank line
+*@format: the paramaters
+* Description: this function prints anything)?
+(* section header: the header of this function is variadic_functions.h)*
+* Return: this function no return
 */
+
 void print_all(const char * const format, ...)
 {
-	va_list ap;
-	unsigned int i;
-	char *cp;
-	void *vp;
-	float *fp;
+	va_list args;
+	int i, j;
+	char *separator;
+	args_t arguments[] = {
+		{"c", char_print},
+		{"i", integer_print},
+		{"f", float_print},
+		{"s", string_print},
+		{NULL, NULL}
+	};
 
-	va_start(ap, NULL);
+	va_start(args, format);
 	i = 0;
-	while (format[i] != '\0')
+	separator = "";
+
+	while (format != NULL && *(format + i) != '\0')
 	{
-		switch (format[i])
+		j = 0;
+		while (j < 4)
 		{
-			case 'i':
-			printf("%i", va_arg(ap, int));
-			break;
-			case 'c':
-			printf("%c", va_arg(ap, int));
-			break;
-			case 'f':
-			vp = va_arg(ap, int*);
-			fp = vp;
-			printf("%f\n", *fp);
-			break;
-			case 's':
-			vp = va_arg(ap, int*);
-			cp = vp;
-			print_str(cp);
-			printf("%s", cp);
-			break;
-			default:
-			break;
+			if (*(format + i) == *(arguments[j]).format)
+			{
+				printf("%s", separator);
+				arguments[j].function(args);
+				separator = ", ";
+
+			}
+			j++;
 		}
-		print_sep(format[i + 1]);
 		i++;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(args);
 }

@@ -1,18 +1,4 @@
 #include "main.h"
-/**
-  * _strlen - get len of str
-  * @s: the str
-  *
-  * Return: len of str
-  */
-int _strlen(char *s)
-{
-	int len;
-
-	while (s[len])
-		len++;
-	return (len);
-}
 
 /**
  * create_file - write a file
@@ -22,23 +8,23 @@ int _strlen(char *s)
  * Return: 1 in success -1 in failure
  */
 
-
 int create_file(const char *filename, char *text_content)
 {
-	int fd, cw, letters;
+	int file_descriptor, length = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
-	if (text_content == NULL)
-		text_content = "";
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
-	if (fd < 0)
+	file_descriptor = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	if (file_descriptor < 0)
 		return (-1);
-	letters = _strlen(text_content);
-	cw = write(fd, text_content, letters);
-	if (cw < 0)
+
+	while (text_content && text_content[length])
+		length++;
+	if (write(file_descriptor, text_content, length) < 0)
+	{
+		close(file_descriptor);
 		return (-1);
-	close(fd);
+	}
+	close(file_descriptor);
 	return (1);
 }
-

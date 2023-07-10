@@ -21,26 +21,24 @@ int _strlen(char *s)
  * Description: write  a file
  * Return: 1 in success -1 in failure
  */
+
+
 int create_file(const char *filename, char *text_content)
 {
-	int len, fd, writeVal;
+	int fd, cw, letters;
 
 	if (filename == NULL)
 		return (-1);
-
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
+	if (text_content == NULL)
+		text_content = "";
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 00600);
 	if (fd < 0)
 		return (-1);
-
-	if (text_content == NULL)
-	{
-		close(fd);
-		return (1);
-	}
-	len = _strlen(text_content);
-	writeVal = write(fd, text_content, len);
-	if (writeVal < 0 || writeVal != len)
+	letters = _strlen(text_content);
+	cw = write(fd, text_content, letters);
+	if (cw < 0)
 		return (-1);
+	close(fd);
 	return (1);
 }
 

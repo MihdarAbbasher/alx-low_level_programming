@@ -1,31 +1,43 @@
 #include "main.h"
 /**
- * append_text_to_file - append a file
- * @filename: the file to write.
- * @text_content: the content to write
- * Description: append content o  a file
- * Return: 1 in success -1 in failure
+  * _strlen - get len of str
+  * @s: the str
+  *
+  * Return: len of str
+  */
+int _strlen(char *s)
+{
+	int len;
+
+	while (s[len])
+		len++;
+	return (len);
+}
+
+/**
+ * append_text_to_file - appends text to end of file
+ * @filename: name of file
+ * @text_content: the text to append
+ * Return: 1 on success and -1 on failure
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd, _write, i; /* i : the number of bytes of the content */
+	int fd, writeVal, len;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_WRONLY | O_APPEND);
-	if (fd == -1)
+	fd = open(filename, O_RDWR | O_APPEND);
+	if (fd < 0)
 		return (-1);
-
-	if (text_content)
+	if (text_content == NULL)
 	{
-		while (text_content[i])
-			i++;
-
-		_write = write(fd, text_content, i);
-		if (_write == -1)
-			return (-1);
+		close(fd);
+		return (1);
 	}
-	close(fd);
+	len = _strlen(text_content);
+	writeVal = write(fd, text_content, len);
+	if (writeVal < 1 || writeVal != len)
+		return (-1);
 	return (1);
 }

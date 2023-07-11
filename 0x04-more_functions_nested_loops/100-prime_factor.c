@@ -29,6 +29,8 @@ int main(void)
 			number = number / i;
 		}
 	}
+	if (number > max)
+		max = number;
 	printf("%d\n", max);
 	return (0);
 }

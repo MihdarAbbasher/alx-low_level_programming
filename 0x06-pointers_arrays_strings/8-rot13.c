@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
   * rot13 - encode a string with rot13
   * @p: the string

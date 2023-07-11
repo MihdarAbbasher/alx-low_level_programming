@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
   * _atoi - convert string to int
   * @s: the string
@@ -27,3 +28,4 @@ int _atoi(char *s)
 	}
 	return (number * sign);
 }
+

@@ -15,7 +15,7 @@
 int main(void)
 
 {
-
-	    return (0);
+	printf("MHD");
+	return (0);
 
 }

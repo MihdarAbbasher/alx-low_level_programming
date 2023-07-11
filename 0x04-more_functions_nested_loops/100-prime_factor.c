@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 #include <limits.h>
+#include <math.h>
 
 /* betty style doc for function main goes there */
 /**
@@ -9,7 +10,7 @@
 * Return: void
 */
 
-void main(void)
+int main(void)
 {
 
 	long int number = 612852475143;

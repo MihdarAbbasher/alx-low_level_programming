@@ -18,7 +18,7 @@ int main(void)
 		tmp = a + b;
 		a = b;
 		b = tmp;
-		printf("%lu, ", b);
+		printf("i: %i, %lu, \n",i +2, b);
 	}
 	tmp = a + b;
 	printf("%lu\n", tmp);

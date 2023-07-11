@@ -2,6 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
+
+
 /* betty style doc for function main goes there */
 /**
 * main - print digits
@@ -10,19 +12,27 @@
 int main(void)
 {
 	int i, j;
+	int q, w, e, r;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i < 99; i++)
 	{
-		for (j = 1; j < 58; j++)
+		q = i / 10;
+		w = i % 10;
+
+		for (j = i + 1; j < 100; j++)
 		{
-			putchar(i);
-			putchar(i);
-		 	putchar(' ');
-		 	putchar(i);
-		 	putchar(j);
-			if (i != 56)
-			{	putchar(',');
-				putchar(' ');
+			e = j / 10;
+			r = j % 10;
+
+			putchar(q + '0');
+			putchar(w + '0');
+			putchar(32);
+			putchar(e + '0');
+			putchar(r + '0');
+			if (!(q == 9 && w == 8))
+			{
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}

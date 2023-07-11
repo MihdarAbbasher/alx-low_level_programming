@@ -9,8 +9,10 @@
 
 char *rot13(char *txt)
 {
-	char *rot = p, *rotvalue1, *rotvalue2;
+	char *rot, *rotvalue1, *rotvalue2;
 	int j = 0;
+
+	rot = p;
 	rotvalue1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	rotvalue2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 

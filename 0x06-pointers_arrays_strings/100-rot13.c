@@ -7,7 +7,7 @@
 * Return: char
 */
 
-char *rot13(char *txt)
+char *rot13(char *p)
 {
 	char *rot, *rotvalue1, *rotvalue2;
 	int j = 0;

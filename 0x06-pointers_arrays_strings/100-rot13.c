@@ -3,7 +3,7 @@
 /* betty style doc for function main goes there */
 /**
 * rot13 - uppercase word
-* @txt: dest str
+* @p: dest str
 * Return: char
 */
 

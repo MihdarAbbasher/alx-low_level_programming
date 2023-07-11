@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include "main.h"
-/* betty style doc for function main goes there */
+
 /**
-* print_times_table - print the alphabet
-* @n: int value
-* Return: void
-*/
-void print_times_table(int n)
-{
-	/**
- * print_spaces - This functions prints commas and spaces
- * @n: is a intenger define the number of spaces
+* print_spaces - This functions prints commas and spaces
+* @n: is a intenger define the number of spaces
 * Description: this function prints a comma and spaces
 * Return: no return a void function.
  */
@@ -25,14 +18,15 @@ void print_spaces(int n)
 		_putchar(' ');
 	}
 }
+
+
+/* betty style doc for function main goes there */
 /**
- * print_times_table - This functions prints times table
- * @n: the table to print
-(* a blank line
- * Description: this function print times table)?
-(* section header: the header file for this function is holberton.h)*
- * Return: no return a void function.
- */
+* print_times_table - print the alphabet
+* @n: int value
+* Return: void
+*/
+
 void print_times_table(int n)
 {
 	int table, number, r;
@@ -68,4 +62,4 @@ void print_times_table(int n)
 		_putchar('\n');
 	}
 }
-}
+

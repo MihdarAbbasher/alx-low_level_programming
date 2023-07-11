@@ -9,26 +9,22 @@
 
 char *rot13(char *txt)
 {
-	int i, j, rot;
+	char *rot = p, *rotvalue1, *rotvalue2;
+	int j = 0;
+	rotvalue1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	rotvalue2 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	char vl[] = `abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXY\
-ZABCDEFGHIJKLM`;
-
-	i = 0;
-	while (txt[i] != '\0')
+	while (*rot)
 	{
-		j = 0;
-		while (j < 80 && txt[i])
+		for (j = 0; rotvalue1[j]; j++)
 		{
-			if (txt[i] == vl[j])
+			if (*rot == rotvalue1[j])
 			{
-				rot = (j + 39) % 52;
-				txt[i] = vl[rot];
+				*rot = rotvalue2[j];
 				break;
 			}
-		j++;
 		}
-	i++;
+		rot++;
 	}
-	return (txt);
+	return (p);
 }

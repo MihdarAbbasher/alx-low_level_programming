@@ -7,9 +7,10 @@
  */
 int main(void)
 {
-    int n;
+    unsigned long int n;
 
-    n = get_bit(1024, 10);
-    printf("%d\n", n);
+    n = 1024;
+    clear_bit(&n, 10);
+    printf("%lu\n", n);
     return (0);
 }

@@ -1,6 +1,26 @@
 #include "main.h"
 
 /**
+ * power - power of base
+ * @base: base
+ * @exp: exponent
+ * Return: base raised to exp
+ */
+unsigned int power(unsigned int base, unsigned int exp)
+{
+	unsigned int i = 0;
+	unsigned int raised = 1;
+
+
+	if (exp == 0)
+		return (1);
+
+	for (i = 0; i < exp; i++)
+		raised = raised * base;
+	return (raised);
+}
+
+/**
  * get_bit - get value of bit at index
  * Return: value
  * @n: num
@@ -27,7 +47,7 @@ int get_bit(unsigned long int n, unsigned int index)
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int copy;
+	unsigned int copy;
 
 	if (index > 64)
 		return (-1);

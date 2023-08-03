@@ -19,6 +19,7 @@ unsigned int power(unsigned int base, unsigned int exp)
 		raised = raised * base;
 	return (raised);
 }
+
 /**
  * get_bit - get value of bit at index
  * Return: value

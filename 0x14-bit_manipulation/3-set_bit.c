@@ -58,7 +58,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	if (copy == 0x1)
 		return (1);
-	
 	*n = (*n) + power(2, index);
 	return (1);
 }

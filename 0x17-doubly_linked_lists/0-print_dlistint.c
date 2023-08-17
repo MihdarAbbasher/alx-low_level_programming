@@ -3,7 +3,7 @@
 /**
  * print_dlistint - print list
  * @h: head of double liked list
- * return: size
+ * Return: size
  */
 
 size_t print_dlistint(const dlistint_t *h)

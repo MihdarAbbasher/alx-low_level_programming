@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - add node at start 
+ * add_dnodeint - add node at start
  * @n: int val
  * @head: head of dlinked list
- * Return: .
+ * Return: new node.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {

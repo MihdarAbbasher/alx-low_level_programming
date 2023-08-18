@@ -22,7 +22,7 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+ * delete_dnodeint_at_index - delete node at index
  * @head: head
  * @index: index
  * Return: 1 if succeed, -1 if failed
@@ -40,6 +40,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		tmp = *head;
 		*head = (*head)->next;
+		(*head)->prev = NULL;
 		free(tmp);
 		return(1);
 	}
@@ -47,13 +48,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		tmp = *head;
 		while (tmp->next)
-		{
 			tmp = tmp->next;
-		}
 		(tmp->prev)->next = NULL;
 		tmp->prev = NULL;
 		free(tmp);
-		
 		return (1);
 	}
 	tmp = *head;

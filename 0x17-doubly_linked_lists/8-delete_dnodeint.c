@@ -22,7 +22,7 @@ size_t dlistint_len(const dlistint_t *h)
 }
 
 /**
- * int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+ * delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
  * @head: head
  * @index: index
  * Return: 1 if succeed, -1 if failed

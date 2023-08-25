@@ -25,5 +25,6 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+int isExist(char *s, char *accept, int start, int l);
 
 #endif /* HEADER_H */

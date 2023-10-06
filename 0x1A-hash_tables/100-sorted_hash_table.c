@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+void insert(shash_table_t *ht, shash_node_t *ht_node);
 /**
  * shash_table_create - create ordered hash table
  * @size: size
@@ -178,7 +179,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- * shash_table_delete - DELETE
+ * shash_table_delete - DEL hash table
  * @ht: hash table
  * Return: Void no return
  */

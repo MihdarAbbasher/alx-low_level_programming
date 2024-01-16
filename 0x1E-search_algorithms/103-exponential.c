@@ -1,7 +1,29 @@
 #include "search_algos.h"
 
+
 /**
- * binary_search - searches for a value in a sorted array of integers using
+ * print_arr - print arr form start to end
+ * @array: arr to print
+ * @start: start index
+ * @end: end index
+ * Return: void
+ */
+
+void print_arr(int *array, size_t start, size_t end)
+{
+        size_t i;
+
+        printf("Searching in array: ");
+        for (i = start; i < end; i++)
+        {
+                printf("%d", array[i]);
+                printf(", ");
+        }
+        printf("%d\n", array[i]);
+}
+
+/**
+ * binary_search2 - searches for a value in a sorted array of integers using
  * the Binary search algorithm
  * @start: start idx
  * @array: is a pointer to the first element of the array to search in
@@ -10,7 +32,7 @@
  * Return: ndex where value is located or -1
  */
 
-int binary_search(int *array, size_t start, size_t end, int value)
+int binary_search2(int *array, size_t start, size_t end, int value)
 {
         size_t inx ;
 
@@ -18,8 +40,8 @@ int binary_search(int *array, size_t start, size_t end, int value)
                 return (-1);
         while (start <= end)
         {
-                inx = (start + end) / 2;
                 print_arr(array, start, end);
+		inx = (start + end) / 2;
                 if (array[inx] == value)
                         return (inx);
                 else if (array[inx] < value)
@@ -29,6 +51,7 @@ int binary_search(int *array, size_t start, size_t end, int value)
         }
         return (-1);
 }
+
 /**
  * exponential_search - searches for a value in a sorted array of integers
  * using an exponential search algorithm
@@ -55,8 +78,11 @@ int exponential_search(int *array, size_t size, int value)
 	}
 
 	low = bound / 2;
-	high = min(bound, size - 1);
+	if (bound >= size)
+		high = size - 1;
+	else
+		high = bound;
 	/* 'found' message generated even if array[high] < value */
 	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
-	return (binary_search_helper(array, low, high, value));
+	return (binary_search2(array, low, high, value));
 }

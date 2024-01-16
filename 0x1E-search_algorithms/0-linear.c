@@ -1,6 +1,7 @@
 # include "search_algos.h"
 
-/*linear_search - linear search of value in array.
+/**
+ * linear_search - linear search of value in array.
  * @array: arr to search in
  * @size: is the number of elements in array
  * @value: is the value to search for

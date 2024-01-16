@@ -38,15 +38,12 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	start = 0;
 	end = size - 1;
-	while (1)
+	while (start <= end)
 	{
 		inx = (start + end) / 2;
-		printf("start: %ld, end: %ld, inx: %ld\n", start, end, inx);
 		print_arr(array, start, end);
 		if (array[inx] == value)
 			return (inx);
-		else if (end <= start)
-			break;
 		else if (array[inx] < value)
 			start = inx + 1;
 		else

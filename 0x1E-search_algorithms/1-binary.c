@@ -22,7 +22,8 @@ void print_arr(int *array, size_t start, size_t end)
 }
 
 /**
- * binary_search - searches for a value in a sorted array of integers using the Binary search algorithm
+ * binary_search - searches for a value in a sorted array of integers using
+ * the Binary search algorithm
  * @size: is the number of elements in array
  * @array: is a pointer to the first element of the array to search in
  * @value: is the value to search for
@@ -35,21 +36,21 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	inx = size / 2;
 	start = 0;
 	end = size - 1;
 	while (1)
 	{
+		inx = (start + end) / 2;
+		printf("start: %ld, end: %ld, inx: %ld\n", start, end, inx);
 		print_arr(array, start, end);
 		if (array[inx] == value)
 			return (inx);
-		else if (inx == start)
+		else if (end <= start)
 			break;
 		else if (array[inx] < value)
-			start = inx;
+			start = inx + 1;
 		else
-			end = inx;
-		inx = (start + end) / 2;
+			end = inx - 1;
 	}
 	return (-1);
 }

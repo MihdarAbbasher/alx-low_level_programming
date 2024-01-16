@@ -34,7 +34,7 @@ void print_arr(int *array, size_t start, size_t end)
 
 int binary_search2(int *array, size_t start, size_t end, int value)
 {
-	size_t inx ;
+	size_t inx;
 
 	if (array == NULL)
 		return (-1);
